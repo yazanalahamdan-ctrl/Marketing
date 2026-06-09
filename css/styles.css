@@ -42,3 +42,8 @@ font-size:14px;
     margin: 22px auto 28px;
   }
 }
+.logo{
+    width:180px;
+    height:auto;
+    display:block;
+}
