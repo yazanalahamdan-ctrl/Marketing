@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فاحص جاهزية الفهرسة في غوغل | Influence Gulf</title>
+<meta name="description" content="أداة مجانية لفحص إشارات الفهرسة الأساسية في HTML وخريطة الموقع وملف robots.txt، مع قائمة إصلاحات عملية قبل طلب الفهرسة من Google Search Console.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://lieferando.cc/tools/indexability-audit/">
+<link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/css/styles.css">
+<meta property="og:type" content="website"><meta property="og:title" content="فاحص جاهزية الفهرسة في غوغل | Influence Gulf">
+<meta property="og:description" content="افحص العنوان والوصف وcanonical وnoindex وH1 وrobots.txt وخريطة الموقع من مصدر الصفحة الذي تلصقه.">
+<meta property="og:url" content="https://lieferando.cc/tools/indexability-audit/"><meta property="og:site_name" content="Influence Gulf">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"فاحص جاهزية الفهرسة","url":"https://lieferando.cc/tools/indexability-audit/","applicationCategory":"SEOApplication","operatingSystem":"Any","inLanguage":"ar","description":"أداة محلية لفحص إشارات SEO الفنية في مصدر HTML وخريطة الموقع وrobots.txt."}</script>
+<style>
+.audit-wrap{max-width:1040px;margin:auto}.audit-panel{border:1px solid #dbe3ee;border-radius:16px;padding:20px;margin:18px 0;background:#fff}.audit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.audit-field{display:flex;flex-direction:column;gap:8px}.audit-field label{font-weight:700}.audit-field input,.audit-field textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:#fff;color:#0f172a}.audit-field textarea{min-height:170px;resize:vertical;direction:ltr;text-align:left;font-family:ui-monospace,Consolas,monospace;font-size:.88rem}.audit-field textarea#htmlSource{min-height:270px}.audit-help{color:#64748b;font-size:.92rem;line-height:1.85}.audit-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.audit-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.audit-item{border:1px solid #dbe3ee;border-radius:12px;padding:14px}.audit-item strong{display:block;margin-bottom:6px}.audit-item p{margin:0;font-size:.94rem;line-height:1.75;overflow-wrap:anywhere}.audit-item.pass{border-inline-start:4px solid #15803d}.audit-item.warn{border-inline-start:4px solid #d97706}.audit-item.fail{border-inline-start:4px solid #dc2626}.audit-summary{padding:16px;border-radius:12px;background:#f1f5f9;margin-bottom:16px;line-height:1.8;color:#0f172a}
+</style>
+</head>
+<body>
+<header class="navbar"><div class="container nav-inner"><a class="brand" href="/">Influence Gulf <span>التسويق عبر المؤثرين</span></a><nav class="nav-links"><a href="/">الرئيسية</a><a href="/services/">الخدمات</a><a href="/blog/">المقالات</a><a href="/about/">عن المنصة</a></nav><a class="nav-cta" href="/#contact">تواصل معنا</a></div></header>
+<main>
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="/">الرئيسية</a> / الأدوات / فاحص جاهزية الفهرسة</div><h1>فاحص جاهزية الفهرسة في غوغل</h1><p class="lead">افحص إشارات SEO الفنية في مصدر الصفحة، وتحقق من وجود رابطها في خريطة الموقع، واكتشف علامات قد تمنع الفهرسة قبل طلب إعادة الزحف.</p><p class="audit-help">الفحص يتم داخل متصفحك من النص الذي تلصقه. لا نطلب تسجيل دخول ولا نرسل محتوى الصفحة إلى خادم. الأداة لا تستطيع معرفة حالة الفهرسة الفعلية أو اختبار استجابة HTTP مباشرة.</p></div></section>
+<section class="section"><div class="container audit-wrap">
+<div class="audit-panel"><h2>1. معلومات الصفحة ومصدر HTML</h2><div class="audit-grid">
+<div class="audit-field"><label for="pageUrl">رابط الصفحة المنشور</label><input id="pageUrl" type="url" value="https://lieferando.cc/" placeholder="https://example.com/page/" dir="ltr"><span class="audit-help">أدخل عنوان URL النهائي الذي تريد فحصه.</span></div>
+<div class="audit-field"><label for="htmlSource">مصدر HTML للصفحة</label><textarea id="htmlSource" placeholder="الصق مصدر الصفحة الكامل هنا..."></textarea><span class="audit-help">افتح الصفحة في المتصفح، واختر «عرض مصدر الصفحة» (View Page Source)، ثم انسخ HTML كاملًا.</span></div>
+<div class="audit-field"><label for="robotsSource">محتوى robots.txt (اختياري)</label><textarea id="robotsSource" style="min-height:130px">User-agent: *
+Allow: /
+Sitemap: https://lieferando.cc/sitemap.xml</textarea></div>
+<div class="audit-field"><label for="sitemapSource">محتوى sitemap.xml (اختياري)</label><textarea id="sitemapSource" style="min-height:130px" placeholder="الصق XML لخريطة الموقع هنا..."></textarea><span class="audit-help">يساعد على التحقق من بناء XML ووجود رابط الصفحة في الخريطة.</span></div>
+</div><div class="audit-actions"><button class="btn btn-primary" id="runAudit" type="button">افحص الصفحة الآن</button><button class="btn btn-secondary" id="loadExample" type="button">تحميل مثال تجريبي</button><button class="btn btn-secondary" id="clearInputs" type="button">مسح المدخلات</button></div></div>
+<div class="audit-panel" id="resultsPanel" aria-live="polite"><h2>2. نتيجة الفحص</h2><p class="audit-help">أدخل مصدر HTML ثم اضغط «افحص الصفحة الآن» لعرض النتائج والتوصيات.</p><div id="summary" class="audit-summary" hidden></div><div id="results" class="audit-results"></div><div id="nextSteps" style="margin-top:18px"></div></div>
+<div class="audit-panel"><h2>3. ماذا تفعل بعد إصلاح الملاحظات؟</h2><ol><li>تأكد أن الصفحة تعيد استجابة HTTP ناجحة وليست صفحة خطأ أو تحويلًا غير مقصود؛ الأداة لا تختبر ذلك مباشرة.</li><li>تأكد أن الصفحة مفيدة وفريدة وأن canonical يشير إلى النسخة الأساسية الصحيحة.</li><li>تحقق أن robots.txt لا يمنع الزحف وأن خريطة الموقع تحتوي عنوان الصفحة النهائي.</li><li>افتح <a href="https://search.google.com/search-console/" target="_blank" rel="noopener noreferrer">Google Search Console</a> واستخدم فحص عنوان URL لمعرفة حالة غوغل الفعلية.</li><li>أرسل خريطة الموقع من قسم Sitemaps. إرسالها لا يضمن فهرسة كل صفحة.</li></ol><p class="audit-help">مراجع رسمية: <a href="https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl" target="_blank" rel="noopener noreferrer">طلب إعادة الزحف</a> · <a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview" target="_blank" rel="noopener noreferrer">دليل خرائط المواقع</a> · <a href="https://developers.google.com/search/docs/crawling-indexing/robots/intro" target="_blank" rel="noopener noreferrer">كيفية عمل robots.txt</a>.</p></div>
+</div></section>
+</main>
+<footer><div class="container"><p>Influence Gulf — أدوات وأدلة عملية للتسويق عبر المؤثرين.</p><p><a href="/">الرئيسية</a> · <a href="/about/">عن المنصة</a> · <a href="/blog/">المقالات</a> · <a href="/tools/influencer-campaign-calculator/">حاسبة الميزانية</a></p></div></footer>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+function item(status,title,detail){return {status:status,title:title,detail:detail};}
+function audit(){
+const raw=$('pageUrl').value.trim(), source=$('htmlSource').value, robots=$('robotsSource').value, sitemap=$('sitemapSource').value.trim(), checks=[];
+let url=null,doc=null;
+try{url=new URL(raw);if(!/^https?:$/.test(url.protocol))throw 0;}catch(e){checks.push(item('fail','رابط الصفحة غير صالح','أدخل رابطًا كاملًا يبدأ بـ https:// أو http://.'));}
+if(!source.trim()){checks.push(item('fail','مصدر HTML غير موجود','الصق مصدر HTML الكامل حتى يمكن فحص العنوان والوصف وcanonical وتعليمات robots.'));}
+else{try{doc=new DOMParser().parseFromString(source,'text/html');}catch(e){checks.push(item('fail','تعذر قراءة HTML','تحقق من النص المنسوخ.'));}}
+if(doc){
+const title=(doc.querySelector('title')?.textContent||'').trim();
+const desc=(doc.querySelector('meta[name="description" i]')?.getAttribute('content')||'').trim();
+const can=doc.querySelector('link[rel~="canonical" i]')?.getAttribute('href')||'';
+const rm=[...doc.querySelectorAll('meta[name="robots" i],meta[name="googlebot" i]')].map(x=>x.getAttribute('content')||'').join(',').toLowerCase();
+const h1=doc.querySelectorAll('h1').length, lang=doc.documentElement.getAttribute('lang')||'';
+const txt=(doc.body?.textContent||'').replace(/\s+/g,' ').trim(), words=txt?txt.split(' ').filter(Boolean).length:0;
+let ca=null;try{if(can)ca=new URL(can,url||undefined);}catch(e){}
+checks.push(title?item('pass','عنوان الصفحة موجود','طول العنوان '+title.length+' حرفًا. '+(title.length<25?'راجع إن كان واضحًا بما يكفي.':title.length>65?'قد يكون طويلًا؛ راجعه يدويًا.':'طول معقول مبدئيًا.')):item('fail','عنوان الصفحة مفقود','أضف عنصر title فريدًا يصف الصفحة.'));
+checks.push(desc?item(desc.length<70||desc.length>180?'warn':'pass','وصف meta موجود','طول الوصف '+desc.length+' حرفًا. غوغل قد يختار مقتطفًا مختلفًا.'):item('warn','وصف meta مفقود','أضف وصفًا دقيقًا ومميزًا للصفحة.'));
+checks.push(can?item(ca?'pass':'warn','canonical موجود',ca?'يشير إلى: '+ca.href:'تعذر تحليل عنوان canonical.'):item('warn','canonical غير موجود','أضف canonical ذاتيًا إذا كانت هذه النسخة الأساسية المقصودة.'));
+if(ca&&url&&ca.origin!==url.origin)checks.push(item('warn','canonical على نطاق مختلف','تأكد أن ذلك مقصود، فقد تختار غوغل النطاق الآخر.'));
+checks.push(/noindex/.test(rm)?item('fail','تعليمة noindex موجودة','تأكد من أن منع الفهرسة مقصود. أزلها فقط إذا أردت السماح بالفهرسة.'):item('pass','لا توجد noindex في meta robots','لم تظهر noindex في المصدر؛ لم يتم فحص ترويسات HTTP.'));
+checks.push(h1===1?item('pass','عدد H1 يساوي واحدًا','راجع أن العنوان الرئيسي يصف موضوع الصفحة.'):item('warn','عدد عناصر H1: '+h1,'استخدم بنية عناوين واضحة؛ تعدد H1 وحده ليس بالضرورة مانعًا للفهرسة.'));
+checks.push(lang?item('pass','لغة الصفحة محددة','قيمة lang هي: '+lang):item('warn','لغة HTML غير محددة','أضف lang="ar" للصفحات العربية.'));
+checks.push(words>=250?item('pass','نص الصفحة قابل للفحص','وجدنا نحو '+words+' كلمة. العدد ليس معيار ترتيب ولا يثبت جودة المحتوى.'):item('warn','النص المستخرج قصير نسبيًا','وجدنا نحو '+words+' كلمة. تحقق من أن الصفحة تجيب عن حاجة الزائر؛ لا تضف نصًا لمجرد زيادة العدد.'));
+const jsonld=doc.querySelector('script[type="application/ld+json"]');
+if(jsonld){try{JSON.parse(jsonld.textContent);checks.push(item('pass','JSON-LD صالح نحويًا','وجدت بيانات منظمة قابلة للتحليل؛ لم يتم التحقق من أهلية النتائج الغنية.'));}catch(e){checks.push(item('warn','مشكلة في JSON-LD','راجع صياغة JSON داخل script.'));}}
+else checks.push(item('warn','لا توجد بيانات JSON-LD','ليست شرطًا للفهرسة؛ أضفها فقط عندما تناسب نوع الصفحة.'));
+}
+if(robots.trim()){
+const lines=robots.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+const blocksPage=lines.some(x=>/^Disallow\s*:\s*\/\s*(#.*)?$/i.test(x));
+const sl=lines.filter(x=>/^Sitemap\s*:/i.test(x));
+checks.push(blocksPage?item('warn','يوجد Disallow: /','قد يمنع الزحف بحسب مجموعة التعليمات. راجع المجموعة المطابقة لـ Googlebot.'):item('pass','لا يوجد حظر عام واضح','فحص مبسط فقط؛ القواعد الخاصة بالمجموعات والمسارات قد تحتاج مراجعة.'));
+checks.push(sl.length?item('pass','رابط sitemap معلن',sl.join(' · ')):item('warn','لا يوجد سطر Sitemap','أضف رابط خريطة الموقع المطلق إذا كانت متاحة.'));
+}else checks.push(item('warn','لم يُدخل robots.txt','الصق محتوى الملف لفحص بعض الإشارات.'));
+if(sitemap){
+try{
+const xml=new DOMParser().parseFromString(sitemap,'application/xml');if(xml.querySelector('parsererror'))throw 0;
+const locs=[...xml.getElementsByTagNameNS('*','loc')].map(n=>(n.textContent||'').trim()).filter(Boolean);
+const seen=new Set(),dups=[];locs.forEach(x=>{if(seen.has(x))dups.push(x);seen.add(x);});
+checks.push(locs.length?item('pass','خريطة الموقع قابلة للتحليل','عُثر على '+locs.length+' رابطًا.'):item('warn','لا توجد روابط loc','تحقق من وجود عناصر url/loc.'));
+checks.push(dups.length?item('warn','روابط مكررة في الخريطة','عدد الروابط المكررة حرفيًا: '+dups.length+'.'):item('pass','لا توجد روابط مكررة حرفيًا','تم فحص التكرار النصي.'));
+if(url){const found=locs.some(x=>{try{return new URL(x).href.replace(/\/$/,'')===url.href.replace(/\/$/,'');}catch(e){return false;}});
+checks.push(found?item('pass','رابط الصفحة موجود في sitemap','تحقق أيضًا من أن الصفحة متاحة وأن الرابط canonical النهائي.'):item('warn','رابط الصفحة غير موجود في sitemap','أضف العنوان النهائي إذا كانت الصفحة أساسية وقابلة للفهرسة.'));}
+const bad=locs.filter(x=>!/^https:\/\//i.test(x));if(bad.length)checks.push(item('warn','روابط غير HTTPS','عددها '+bad.length+'. استخدم العناوين النهائية الآمنة إذا كان الموقع يعمل عبر HTTPS.'));
+}catch(e){checks.push(item('fail','تعذر تحليل sitemap XML','تحقق من صحة XML وعدم لصق صفحة HTML بدل الملف.'));}
+}else checks.push(item('warn','لم يُدخل sitemap.xml','الصق محتوى الخريطة للتحقق من بناء XML ووجود الرابط.'));
+const fail=checks.filter(x=>x.status==='fail').length,warn=checks.filter(x=>x.status==='warn').length,pass=checks.filter(x=>x.status==='pass').length;
+$('summary').hidden=false;$('summary').innerHTML='<strong>نتيجة الفحص المحلي:</strong> '+pass+' سليم · '+warn+' ملاحظات · '+fail+' يحتاج إصلاحًا. <span>هذه ليست نتيجة من Google ولا تثبت أن الصفحة مفهرسة.</span>';
+$('results').innerHTML=checks.map(x=>'<div class="audit-item '+x.status+'"><strong>'+({pass:'✓',warn:'!',fail:'×'}[x.status])+' '+esc(x.title)+'</strong><p>'+esc(x.detail)+'</p></div>').join('');
+const steps=[];if(fail)steps.push('ابدأ بإصلاح العناصر المصنفة «يحتاج إصلاحًا».');if(warn)steps.push('راجع التحذيرات حسب الحالة؛ ليست كل التحذيرات مانعًا للفهرسة.');steps.push('بعد التأكد من إتاحة الصفحة وجودتها، افتح Google Search Console وافحص عنوان URL.');steps.push('تذكر أن إرسال خريطة الموقع أو طلب الفهرسة لا يضمن إدراج الصفحة في نتائج البحث.');
+$('nextSteps').innerHTML='<h3>الخطوات المقترحة</h3><ol>'+steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol><div class="audit-actions"><button type="button" class="btn btn-primary" id="openGsc">فتح Google Search Console</button><button type="button" class="btn btn-secondary" id="copyReport">نسخ التقرير</button></div>';
+$('openGsc').addEventListener('click',()=>window.open('https://search.google.com/search-console/','_blank','noopener'));
+$('copyReport').addEventListener('click',()=>{const report=checks.map(x=>({pass:'سليم',warn:'مراجعة',fail:'إصلاح'}[x.status])+' — '+x.title+'\n'+x.detail).join('\n\n');if(navigator.clipboard?.writeText)navigator.clipboard.writeText(report).then(()=>alert('تم نسخ التقرير.')).catch(()=>alert(report));else alert(report);});
+}
+$('runAudit').addEventListener('click',audit);
+$('clearInputs').addEventListener('click',()=>{$('htmlSource').value='';$('sitemapSource').value='';$('pageUrl').value='';$('results').innerHTML='';$('summary').hidden=true;$('nextSteps').innerHTML='';});
+$('loadExample').addEventListener('click',()=>{$('pageUrl').value='https://example.com/article/';$('htmlSource').value='<!doctype html><html lang="ar"><head><title>دليل تجريبي</title><meta name="description" content="مثال توضيحي لفحص عناصر الصفحة الأساسية ومحركات البحث."><meta name="robots" content="index, follow"><link rel="canonical" href="https://example.com/article/"></head><body><h1>دليل تجريبي</h1><p>هذا نص تجريبي لتوضيح طريقة عمل الأداة. لا يمثل نتيجة حقيقية ولا يثبت حالة الفهرسة.</p></body></html>';$('robotsSource').value='User-agent: *\nAllow: /\nSitemap: https://example.com/sitemap.xml';$('sitemapSource').value='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://example.com/article/</loc></url></urlset>';audit();});
+})();
+</script>
+</body></html>
