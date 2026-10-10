@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>حاسبة ميزانية حملة المؤثرين | Influence Gulf</title>
+  <meta name="description" content="احسب تخطيطياً ميزانية حملة المؤثرين، عدد التعاونات الممكنة، المشاهدات المتوقعة ونقطة التعادل باستخدام أرقامك أنت، دون الاعتماد على أسعار سوقية غير موثقة.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://lieferando.cc/tools/influencer-campaign-calculator/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="حاسبة ميزانية حملة المؤثرين | Influence Gulf">
+  <meta property="og:description" content="أداة تخطيط تفاعلية لحساب ميزانية الحملة ومؤشرات المشاهدات ونقطة التعادل باستخدام افتراضاتك.">
+  <meta property="og:url" content="https://lieferando.cc/tools/influencer-campaign-calculator/">
+  <meta property="og:site_name" content="Influence Gulf">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"حاسبة ميزانية حملة المؤثرين",
+    "url":"https://lieferando.cc/tools/influencer-campaign-calculator/",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Any",
+    "inLanguage":"ar",
+    "description":"حاسبة تخطيط تستخدم مدخلات المستخدم لتقدير تكاليف الحملة والمشاهدات ونقطة التعادل."
+  }
+  </script>
+  <style>
+    .calc-wrap{max-width:900px;margin:auto}
+    .calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .calc-field{display:flex;flex-direction:column;gap:8px}
+    .calc-field label{font-weight:700}
+    .calc-field input{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:#fff;color:#0f172a}
+    .calc-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:22px}
+    .calc-result{padding:18px;border:1px solid #dbe3ee;border-radius:14px;background:#f8fafc}
+    .calc-result span{display:block;color:#475569;font-size:.92rem;margin-bottom:8px}
+    .calc-result strong{font-size:1.35rem;color:#0f172a;overflow-wrap:anywhere}
+    .calc-note{font-size:.94rem;color:#475569;line-height:1.9}
+    .calc-section{margin:24px 0;padding:22px;border:1px solid #e2e8f0;border-radius:16px}
+  </style>
+</head>
+<body>
+  <header class="navbar"><div class="container nav-inner">
+    <a class="brand" href="/">Influence Gulf <span>التسويق عبر المؤثرين</span></a>
+    <nav class="nav-links"><a href="/">الرئيسية</a><a href="/services/">الخدمات</a><a href="/blog/">المقالات</a><a href="/about/">عن المنصة</a></nav>
+    <a class="nav-cta" href="/#contact">تواصل معنا</a>
+  </div></header>
+  <main>
+    <section class="page-hero"><div class="container">
+      <div class="breadcrumb"><a href="/">الرئيسية</a> / الأدوات / حاسبة حملة المؤثرين</div>
+      <h1>حاسبة ميزانية حملة المؤثرين</h1>
+      <p class="lead">حوّل عرض السعر وأرقام الأداء التي لديك إلى خطة قابلة للمقارنة. أدخل بياناتك لتقدير التكاليف والمشاهدات ونقطة التعادل في مكان واحد.</p>
+    </div></section>
+    <section class="section"><div class="container calc-wrap">
+      <div class="calc-section">
+        <h2>1. أدخل بيانات الحملة</h2>
+        <p class="calc-note">كل النتائج تقديرات حسابية مبنية على مدخلاتك وليست أسعاراً سوقية أو ضماناً للنتائج. أدخل الأرقام من عروض الأسعار وتقارير المؤثرين التي تتحقق منها.</p>
+        <div class="calc-grid">
+          <div class="calc-field"><label for="budget">الميزانية الإجمالية (ريال)</label><input id="budget" type="number" min="0" step="100" value="10000"></div>
+          <div class="calc-field"><label for="quote">سعر التعاون الواحد (ريال)</label><input id="quote" type="number" min="0" step="50" value="2500"></div>
+          <div class="calc-field"><label for="views">متوسط المشاهدات المتوقعة لكل تعاون</label><input id="views" type="number" min="0" step="100" value="20000"></div>
+          <div class="calc-field"><label for="engagement">نسبة التفاعل المتوقعة (%)</label><input id="engagement" type="number" min="0" max="100" step="0.1" value="3"></div>
+          <div class="calc-field"><label for="conversion">نسبة التحويل من التفاعل إلى طلب (%)</label><input id="conversion" type="number" min="0" max="100" step="0.1" value="2"></div>
+          <div class="calc-field"><label for="margin">هامش الربح لكل طلب (ريال)</label><input id="margin" type="number" min="0" step="1" value="80"></div>
+        </div>
+        <button class="btn btn-primary" id="calculate" type="button" style="margin-top:20px">احسب التقديرات</button>
+      </div>
+      <div class="calc-section" aria-live="polite">
+        <h2>2. نتائج التخطيط</h2>
+        <div class="calc-results">
+          <div class="calc-result"><span>عدد التعاونات الممكنة</span><strong id="collabs">4</strong></div>
+          <div class="calc-result"><span>إجمالي المشاهدات المقدّرة</span><strong id="totalViews">80,000</strong></div>
+          <div class="calc-result"><span>التفاعلات المقدّرة</span><strong id="totalEngagement">2,400</strong></div>
+          <div class="calc-result"><span>الطلبات المقدّرة</span><strong id="orders">48</strong></div>
+          <div class="calc-result"><span>الربح الإجمالي التقديري قبل تكلفة الحملة</span><strong id="grossProfit">3,840 ر.س</strong></div>
+          <div class="calc-result"><span>الربح/الخسارة بعد تكلفة الحملة</span><strong id="netProfit">−6,160 ر.س</strong></div>
+          <div class="calc-result"><span>طلبات التعادل المطلوبة</span><strong id="breakEven">125</strong></div>
+          <div class="calc-result"><span>تكلفة كل ألف مشاهدة (CPM)</span><strong id="cpm">125 ر.س</strong></div>
+        </div>
+        <p id="resultNote" class="calc-note">عدّل الافتراضات حسب تقاريرك الفعلية. لا تشمل الحسابات تكاليف الإنتاج أو الضرائب أو أي رسوم إضافية ما لم تدخلها ضمن الميزانية.</p>
+      </div>
+      <div class="calc-section">
+        <h2>كيف تستخدم النتائج لاتخاذ قرار أفضل؟</h2>
+        <ul>
+          <li>اطلب من المؤثر بيانات المشاهدات الفعلية لآخر منشورات مشابهة، لا عدد المتابعين فقط.</li>
+          <li>قارن بين عروض الأسعار على أساس تكلفة المشاهدة والتفاعل والطلب، مع التأكد من أن الجمهور يطابق السوق المستهدف.</li>
+          <li>استخدم روابط تتبع أو رموز خصم مختلفة لكل تعاون حتى تستطيع فصل نتائج كل مؤثر.</li>
+          <li>ابدأ باختبار محدود، ثم زد الميزانية عندما تظهر بيانات موثوقة على الأداء.</li>
+        </ul>
+        <p>للاطلاع على سياق التسعير، اقرأ <a href="/blog/اسعار-المؤثرين-في-السعودية/">دليل أسعار المؤثرين في السعودية</a>، وللتخطيط والتنفيذ راجع <a href="/services/">خدمات التسويق عبر المؤثرين</a>.</p>
+      </div>
+      <p class="calc-note">ملاحظة منهجية: النتائج تتغير كثيراً حسب المنصة ونوع المحتوى وجودة الجمهور والمدينة وحقوق استخدام الإعلان. هذه الأداة لا تسحب بيانات من المنصات ولا تتحقق من عروض الأسعار؛ دقتها تعتمد على جودة المدخلات.</p>
+    </div></section>
+  </main>
+  <footer><div class="container"><p>Influence Gulf — أدوات وأدلة عملية للتسويق عبر المؤثرين.</p><p><a href="/">الرئيسية</a> · <a href="/about/">عن المنصة</a> · <a href="/blog/">المقالات</a> · <a href="/privacy-policy/">سياسة الخصوصية</a></p></div></footer>
+  <script>
+    (function(){
+      const ids=['budget','quote','views','engagement','conversion','margin'];
+      const el={}; ids.forEach(id=>el[id]=document.getElementById(id));
+      const fmt=n=>Number.isFinite(n)?Math.round(n).toLocaleString('en-US'):'—';
+      const sar=n=>fmt(n)+' ر.س';
+      function calc(){
+        const budget=Math.max(0,Number(el.budget.value)||0);
+        const quote=Math.max(0,Number(el.quote.value)||0);
+        const views=Math.max(0,Number(el.views.value)||0);
+        const engagement=Math.min(100,Math.max(0,Number(el.engagement.value)||0))/100;
+        const conversion=Math.min(100,Math.max(0,Number(el.conversion.value)||0))/100;
+        const margin=Math.max(0,Number(el.margin.value)||0);
+        const count=quote>0?Math.floor(budget/quote):0;
+        const totalViews=count*views;
+        const interactions=totalViews*engagement;
+        const orders=interactions*conversion;
+        const gross=orders*margin;
+        const spent=count*quote;
+        const net=gross-spent;
+        const be=margin>0?Math.ceil(spent/margin):null;
+        const cpm=totalViews>0?spent/totalViews*1000:null;
+        document.getElementById('collabs').textContent=fmt(count);
+        document.getElementById('totalViews').textContent=fmt(totalViews);
+        document.getElementById('totalEngagement').textContent=fmt(interactions);
+        document.getElementById('orders').textContent=fmt(orders);
+        document.getElementById('grossProfit').textContent=sar(gross);
+        document.getElementById('netProfit').textContent=(net<0?'−':'')+sar(Math.abs(net));
+        document.getElementById('breakEven').textContent=be===null?'أدخل هامش ربح أكبر من صفر':fmt(be);
+        document.getElementById('cpm').textContent=cpm===null?'—':sar(cpm);
+        document.getElementById('resultNote').textContent='الحساب يفترض أن الميزانية تُنفق على تعاونات كاملة بسعر موحد، ويستخدم نسب التفاعل والتحويل التي أدخلتها. الطلبات والربح أرقام تقديرية وليست توقعات مضمونة. لا تشمل النتائج تكاليف إضافية إلا إذا كانت مدرجة في الميزانية.';
+      }
+      document.getElementById('calculate').addEventListener('click',calc);
+      ids.forEach(id=>el[id].addEventListener('input',calc));
+      calc();
+    })();
+  </script>
+</body>
+</html>
