@@ -61,6 +61,78 @@
  ]
 }
 </script>
+<style>
+/* Article-specific polish: readable on phones, tablets and desktops */
+:root{scroll-behavior:smooth;scroll-padding-top:110px}
+body{overflow-wrap:anywhere}
+a:focus-visible,button:focus-visible{outline:3px solid #f59e0b;outline-offset:4px}
+.page-hero{padding:clamp(54px,8vw,100px) 0 clamp(42px,6vw,76px)}
+.page-hero .container{max-width:1000px}
+.page-hero h1{max-width:920px;font-size:clamp(30px,4.5vw,54px);letter-spacing:-.025em}
+.page-hero .lead{font-size:clamp(16px,2vw,20px);max-width:780px}
+.article-layout{width:min(1120px,92%);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
+.article-content{width:100%;max-width:880px;margin:0 auto;padding:clamp(22px,4.5vw,56px)}
+.article-meta{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;color:#667085;font-size:14px;margin:0 0 24px}
+.article-meta span{display:inline-flex;align-items:center;gap:7px}
+.article-cover{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;border-radius:clamp(14px,2vw,24px);margin:0 auto 28px;border:1px solid #e5e7eb;box-shadow:0 12px 32px rgba(15,23,42,.08)}
+.article-toc{background:linear-gradient(135deg,#fffaf0,#fff);border:1px solid #f3d7a2;border-radius:20px;padding:clamp(18px,3vw,28px);margin:28px 0 38px}
+.article-toc h2{font-size:clamp(20px,3vw,25px);margin:0 0 12px;padding:0}
+.article-toc h2:before{display:none}
+.article-toc p{font-size:15px!important;margin-bottom:12px!important;color:#667085!important}
+.article-toc ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px;margin:0;padding:0;list-style:none;counter-reset:none}
+.article-toc li{margin:0;padding:0;background:transparent;border:0;border-radius:0;font-size:15px;font-weight:700}
+.article-toc li:before{display:none}
+.article-toc a{display:block;height:100%;padding:10px 12px;border-radius:10px;background:#fff;color:#344054;border:1px solid #eef0f3;text-decoration:none}
+.article-toc a:hover{background:#fff3d6;border-color:#f4cf7b;text-decoration:none}
+.article-content h2{scroll-margin-top:110px}
+.article-content h3{font-size:clamp(20px,2.5vw,24px)}
+.article-content p{font-size:clamp(16px,1.5vw,18px);line-height:2}
+.article-content li{font-size:clamp(15px,1.5vw,17px);line-height:1.9}
+.article-content .info-box{padding:clamp(18px,3vw,28px);margin:28px 0;background:#fff9ed;border:1px solid #f5dfb6;border-radius:18px}
+.article-content .info-box h2,.article-content .info-box h3{margin-top:0}
+.article-content .info-box ul{margin-bottom:0}
+.table-scroll{width:100%;overflow-x:auto;margin:28px 0;border:1px solid #e5e7eb;border-radius:14px;-webkit-overflow-scrolling:touch}
+.article-content table{width:100%;min-width:620px;border-collapse:collapse;background:#fff;font-size:15px;line-height:1.8}
+.article-content th,.article-content td{padding:14px 16px;text-align:right;vertical-align:top;border-bottom:1px solid #e5e7eb}
+.article-content th{background:#172033;color:#fff;font-weight:800}
+.article-content tr:last-child td{border-bottom:0}
+.article-content tbody tr:nth-child(even){background:#f8fafc}
+.article-content .cta-box{margin:34px 0;padding:clamp(22px,4vw,34px);border-radius:22px;background:linear-gradient(135deg,#111827,#263449);color:#fff}
+.article-content .cta-box h2{margin-top:0;color:#fff}
+.article-content .cta-box p{color:#e5e7eb}
+.article-content .cta-box a:not(.btn){color:#ffd27a}
+.article-content .cta-box .btn{min-height:48px}
+.article-content .internal-links{margin-top:36px;padding-top:8px;border-top:1px solid #eaecf0}
+.article-content .internal-links ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.article-content .internal-links li{margin:0;padding:0;background:transparent;border:0}
+.article-content .internal-links li:before{display:none}
+.article-content .internal-links a{display:block;padding:12px 14px;border:1px solid #eaecf0;border-radius:12px;color:#344054;background:#fff}
+.article-content .internal-links a:hover{border-color:#f59e0b;background:#fffaf0}
+@media(min-width:1100px){.article-layout{grid-template-columns:minmax(0,880px)}}
+@media(max-width:640px){
+ .container{width:min(100% - 28px,1120px)}
+ .topbar{font-size:12px}
+ .topbar .container{gap:4px}
+ .nav-inner{gap:12px}
+ .nav-links{gap:10px 16px;font-size:14px}
+ .nav-cta{padding:10px 18px}
+ .page-hero{padding:48px 0 42px}
+ .page-hero h1{font-size:clamp(27px,8vw,36px);line-height:1.45}
+ .page-hero .lead{font-size:16px;line-height:1.9}
+ .section{padding:28px 0 48px}
+ .article-content{padding:20px 16px;border-radius:18px}
+ .article-content h2{font-size:23px;margin:36px 0 15px;padding-right:16px}
+ .article-content h2:before{height:26px;top:8px;width:4px}
+ .article-content p{font-size:16px;line-height:1.95}
+ .article-content li{padding:13px 42px 13px 12px;font-size:15px}
+ .article-content ol li:before{right:10px;top:13px;width:24px;height:24px;line-height:24px}
+ .article-toc ol,.article-content .internal-links ul{grid-template-columns:1fr}
+ .article-toc{padding:16px;margin:22px 0 28px}
+ .article-meta{font-size:12px}
+ .article-content th,.article-content td{padding:11px 12px}
+}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
 <div class="topbar"><div class="container"><span>أدلة عملية للتسويق عبر المؤثرين في السعودية والخليج</span><span>Influence Gulf</span></div></div>
@@ -75,8 +147,20 @@
 <h1>ترخيص موثوق للمؤثرين في السعودية 2026: كيف تتحقق منه قبل الإعلان؟</h1>
 <p class="lead">قبل أن يتفق المؤثر مع علامة تجارية، أو تحوّل الشركة ميزانية إلى حملة، هناك خطوة لا يصح تجاوزها: التأكد من المتطلبات النظامية والترخيص من مصدر رسمي. هذا الدليل يشرح طريقة التحقق وما الذي ينبغي مراجعته عمليًا، من دون تخمين رسوم أو شروط قد تتغير.</p>
 </div></section>
-<section class="section"><div class="container article-content">
-<p><strong>آخر مراجعة تحريرية: 11 أكتوبر 2026.</strong> أُعد هذا الدليل لتسهيل الوصول إلى المصادر الرسمية ومساعدة المؤثرين والشركات على طرح الأسئلة الصحيحة قبل تنفيذ إعلان مدفوع. المتطلبات والرسوم والإجراءات قابلة للتحديث؛ لذلك تبقى بوابة الجهة المنظمة المرجع النهائي لأي قرار.</p>
+<section class="section"><div class="article-layout"><article class="article-content">
+<div class="article-meta"><span>📅 آخر مراجعة: 11 أكتوبر 2026</span><span>⏱️ وقت القراءة: نحو 7 دقائق</span><span>📚 دليل إرشادي بمصادر رسمية</span></div>
+<img class="article-cover" src="/images/gulf-influencer-marketing-blog-cover.jpg" alt="دليل التحقق من ترخيص موثوق للمؤثرين في السعودية قبل تنفيذ حملة إعلانية" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async">
+<p><strong>قبل أن تبدأ:</strong> هذا الدليل يشرح طريقة الوصول إلى خدمة التحقق الرسمية وما ينبغي مراجعته قبل التعاقد. تفاصيل الخدمة قد تتغير، لذلك اعتمد على البوابة الرسمية عند اتخاذ القرار.</p>
+<nav class="article-toc" aria-label="محتويات المقال"><h2>محتويات الدليل</h2><p>انتقل مباشرة إلى السؤال الذي تريد إجابته.</p><ol>
+<li><a href="#what-is-mawthooq">ما هو ترخيص موثوق؟</a></li>
+<li><a href="#verify-license">طريقة التحقق خطوة بخطوة</a></li>
+<li><a href="#creator-requirements">قبل تقديم طلب الترخيص</a></li>
+<li><a href="#brand-checklist">قائمة تحقق للشركات</a></li>
+<li><a href="#license-not-enough">هل الترخيص يكفي للاختيار؟</a></li>
+<li><a href="#contract-checklist">توثيق الاتفاق الإعلاني</a></li>
+<li><a href="#official-sources">المصادر الرسمية</a></li>
+<li><a href="#faq">الأسئلة الشائعة</a></li>
+</ol></nav> أُعد هذا الدليل لتسهيل الوصول إلى المصادر الرسمية ومساعدة المؤثرين والشركات على طرح الأسئلة الصحيحة قبل تنفيذ إعلان مدفوع. المتطلبات والرسوم والإجراءات قابلة للتحديث؛ لذلك تبقى بوابة الجهة المنظمة المرجع النهائي لأي قرار.</p>
 
 <div class="info-box"><h2>الخلاصة السريعة</h2><ul>
 <li>«موثوق» هي خدمة ترخيص مرتبطة بتقديم الأفراد للمحتوى الإعلاني عبر منصات التواصل الاجتماعي في السعودية.</li>
@@ -85,12 +169,12 @@
 <li>تحقق من المتطلبات الحالية قبل الاتفاق؛ لا تفترض أن شروط العام الماضي أو الرسوم المتداولة في منشور قديم ما زالت سارية.</li>
 </ul></div>
 
-<h2>ما هو ترخيص موثوق؟</h2>
+<h2 id="what-is-mawthooq">ما هو ترخيص موثوق؟</h2>
 <p>موثوق خدمة إلكترونية ضمن بوابة التراخيص الإعلامية السعودية، ومخصصة لترخيص تقديم الأفراد للمحتوى الإعلاني عبر منصات التواصل الاجتماعي. أهميتها العملية أنها تساعد على التمييز بين التوصية الشخصية العفوية وبين نشاط نشر محتوى إعلاني يخضع لمتطلبات تنظيمية.</p>
 <p>إذا كنت مؤثرًا وتستقبل عروضًا تجارية، فالأفضل أن تتحقق من وضعك قبل قبول الحملة. وإذا كنت صاحب علامة تجارية أو مسؤول تسويق، فأدرج التحقق من المتطلبات ضمن إجراءات اختيار المؤثرين، تمامًا مثل مراجعة الجمهور والسعر ونتائج الحملات السابقة.</p>
 <p><strong>المصدر الرسمي:</strong> <a href="https://elaam.gmedia.gov.sa/" target="_blank" rel="noopener noreferrer">بوابة التراخيص الإعلامية الموحدة</a>. تعرض البوابة خدمة «موثوق» كما تتيح الوصول إلى خدمة التحقق من حصول المعلن على الترخيص.</p>
 
-<h2>كيف تتحقق من ترخيص المؤثر خطوة بخطوة؟</h2>
+<h2 id="verify-license">كيف تتحقق من ترخيص المؤثر خطوة بخطوة؟</h2>
 <ol>
 <li><strong>افتح البوابة الرسمية.</strong> ادخل إلى <a href="https://elaam.gmedia.gov.sa/" target="_blank" rel="noopener noreferrer">بوابة التراخيص الإعلامية</a> مباشرة، وتجنب الاعتماد على روابط غير معروفة أو صفحات وسيطة.</li>
 <li><strong>ابحث عن خدمة التحقق.</strong> استخدم خيار التحقق من حصول المعلن على ترخيص، أو الخدمة المخصصة لـ«موثوق» إذا كانت متاحة ضمن قائمة الخدمات.</li>
@@ -102,7 +186,7 @@
 
 <div class="info-box"><h3>تنبيه مهم</h3><p>إذا لم تظهر نتيجة واضحة، أو كانت البيانات غير متطابقة، فلا تعتبر ذلك دليلًا قاطعًا على وجود مخالفة أو عدم وجود ترخيص. تواصل مع الجهة المنظمة عبر بيانات الاتصال المنشورة في البوابة واطلب توضيحًا رسميًا قبل المضي في الحملة.</p></div>
 
-<h2>ما الذي يجب أن يعرفه المؤثر قبل تقديم طلب الترخيص؟</h2>
+<h2 id="creator-requirements">ما الذي يجب أن يعرفه المؤثر قبل تقديم طلب الترخيص؟</h2>
 <p>ابدأ بقراءة وصف الخدمة وشروطها الحالية داخل البوابة، ثم تأكد من أن بياناتك ومستنداتك جاهزة وفق ما تطلبه الجهة. لا تعتمد على قائمة شروط منشورة في حساب اجتماعي أو مقال قديم، لأن إجراءات الترخيص قد تتغير.</p>
 <ul>
 <li><strong>اقرأ نطاق الخدمة:</strong> تأكد من أن الخدمة تنطبق على نوع النشاط الإعلاني الذي تنوي ممارسته.</li>
@@ -113,23 +197,23 @@
 </ul>
 <p>لم نذكر في هذا المقال مبلغًا محددًا للرسوم أو مدة ثابتة لإصدار الترخيص؛ لأن هذه التفاصيل يجب أخذها من صفحة الخدمة الرسمية في وقت التقديم، لا من تقدير غير موثق.</p>
 
-<h2>قائمة تحقق للشركات قبل التعاقد مع مؤثر</h2>
+<h2 id="brand-checklist">قائمة تحقق للشركات قبل التعاقد مع مؤثر</h2>
 <p>تساعد هذه القائمة فريق التسويق على تقليل المخاطر الإدارية والتنفيذية قبل دفع العربون أو اعتماد المحتوى النهائي:</p>
-<table><thead><tr><th>ما الذي تراجعه؟</th><th>كيف تتأكد؟</th><th>متى تتوقف للمراجعة؟</th></tr></thead><tbody>
+<div class="table-scroll" role="region" aria-label="جدول قائمة التحقق للشركات" tabindex="0"><table><thead><tr><th>ما الذي تراجعه؟</th><th>كيف تتأكد؟</th><th>متى تتوقف للمراجعة؟</th></tr></thead><tbody>
 <tr><td>الترخيص والمتطلبات النظامية</td><td>التحقق من البوابة الرسمية وتوثيق تاريخ المراجعة</td><td>عند غياب نتيجة واضحة أو عدم تطابق البيانات</td></tr>
 <tr><td>هوية الطرف المتعاقد</td><td>مطابقة بيانات العقد والفاتورة ووسيلة التواصل</td><td>عند وجود اختلاف غير مفسر</td></tr>
 <tr><td>نطاق الإعلان</td><td>تحديد المنصة والصيغة وعدد المنشورات وموعد النشر</td><td>إذا كان الاتفاق شفهيًا أو غير محدد</td></tr>
 <tr><td>المحتوى والادعاءات</td><td>مراجعة النص والمنتج والعروض والادعاءات قبل النشر</td><td>إذا احتوى الإعلان على ادعاءات صحية أو مالية أو نتائج غير مثبتة</td></tr>
 <tr><td>القياس والتقرير</td><td>تحديد رابط تتبع أو رمز خصم ومؤشرات نجاح مناسبة</td><td>إذا لم توجد طريقة لمعرفة نتيجة الحملة</td></tr>
 <tr><td>حقوق الاستخدام</td><td>توضيح مدة استخدام الفيديو والصور وإمكانية إعادة نشرها والإعلانات المدفوعة</td><td>إذا افترض أحد الطرفين أن الحقوق مشمولة دون اتفاق</td></tr>
-</tbody></table>
+</tbody></table></div>
 
-<h2>هل التحقق من الترخيص وحده يكفي لاختيار المؤثر؟</h2>
+<h2 id="license-not-enough">هل التحقق من الترخيص وحده يكفي لاختيار المؤثر؟</h2>
 <p>لا. التحقق التنظيمي خطوة أساسية، لكنه لا يثبت أن المؤثر مناسب تجاريًا أو أن الحملة ستحقق مبيعات. القرار الجيد يجمع بين الالتزام بالمتطلبات، وجودة الجمهور، وملاءمة المحتوى، والتكلفة، وخطة القياس.</p>
 <p>مثلًا، قد يكون حساب كبير المتابعين مناسبًا لزيادة الوعي، بينما يكون مؤثر محلي أصغر أكثر ملاءمة لمتجر يخدم مدينة واحدة. قارن بيانات الجمهور الفعلية، ومتوسط المشاهدات، وطبيعة التعليقات، ونتائج الإعلانات السابقة بدل اتخاذ القرار من عدد المتابعين وحده.</p>
 <p>يمكنك متابعة دليلنا حول <a href="/blog/كيف-تختار-المؤثر-المناسب-لعلامتك-التجارية/">كيفية اختيار المؤثر المناسب لعلامتك التجارية</a>، ومراجعة <a href="/blog/اسعار-المؤثرين-في-السعودية/">دليل أسعار المؤثرين في السعودية</a> قبل تحديد الميزانية.</p>
 
-<h2>كيف توثق الاتفاق الإعلاني بطريقة واضحة؟</h2>
+<h2 id="contract-checklist">كيف توثق الاتفاق الإعلاني بطريقة واضحة؟</h2>
 <p>حتى عندما تكون المتطلبات النظامية واضحة، فإن كثيرًا من الخلافات تنشأ بسبب اتفاق غير محدد. جهّز ملخصًا مكتوبًا يتضمن على الأقل:</p>
 <ul>
 <li>اسم الطرفين وبيانات التواصل والفاتورة أو مستند الدفع.</li>
@@ -143,7 +227,7 @@
 </ul>
 <p>هذه القائمة إرشادات تنظيمية عامة وليست بديلًا عن مراجعة قانونية عند الحاجة، خصوصًا للحملات الكبيرة أو القطاعات التي تخضع لمتطلبات إضافية.</p>
 
-<h2>أين تجد المعلومات الرسمية؟</h2>
+<h2 id="official-sources">أين تجد المعلومات الرسمية؟</h2>
 <ul>
 <li><a href="https://elaam.gmedia.gov.sa/" target="_blank" rel="noopener noreferrer">بوابة التراخيص الإعلامية الموحدة</a>: للاطلاع على الخدمات الحالية، ومنها خدمة «موثوق» والتحقق من الترخيص.</li>
 <li><a href="https://laws.boe.gov.sa/" target="_blank" rel="noopener noreferrer">بوابة الأنظمة السعودية – هيئة الخبراء بمجلس الوزراء</a>: للرجوع إلى الأنظمة المنشورة رسميًا عند الحاجة إلى قراءة النص النظامي.</li>
@@ -151,7 +235,7 @@
 </ul>
 <p>عند اختلاف المعلومات بين منشور قديم وصفحة الخدمة الحالية، أعطِ الأولوية للمصدر الحكومي الرسمي الأحدث، واطلب توضيحًا من الجهة المختصة إذا بقيت نقطة غير واضحة.</p>
 
-<h2>أسئلة شائعة عن ترخيص موثوق</h2>
+<h2 id="faq">أسئلة شائعة عن ترخيص موثوق</h2>
 <h3>ما هو ترخيص موثوق للمؤثرين؟</h3>
 <p>هو خدمة ترخيص لتقديم الأفراد للمحتوى الإعلاني عبر منصات التواصل الاجتماعي في السعودية، وفق نطاق ومتطلبات الخدمة المنشورة رسميًا.</p>
 <h3>كيف أتحقق من ترخيص مؤثر قبل الإعلان معه؟</h3>
@@ -172,7 +256,7 @@
 <li><a href="/blog/اخطاء-التسويق-عبر-المؤثرين-التي-تهدر-الميزانية/">أخطاء التسويق عبر المؤثرين التي تهدر الميزانية</a></li>
 </ul></div>
 <p><small>ملاحظة تحريرية: هذا المحتوى معلوماتي عام، وليس استشارة قانونية. قد تتغير الأنظمة والإجراءات والرسوم؛ راجع دائمًا الجهة الرسمية قبل اتخاذ القرار.</small></p>
-</div></section>
+</article></div></section>
 </main>
 </body>
 </html>
