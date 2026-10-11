@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مقارن عروض المؤثرين | قارن التكلفة والأداء والملاءمة</title>
+  <meta name="description" content="أداة مجانية لمقارنة عروض المؤثرين في السعودية والخليج بناءً على أسعارك الفعلية ومتوسط المشاهدات والتفاعل والنقرات والطلبات وملاءمة الجمهور وحقوق الاستخدام.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Influence Gulf">
+  <link rel="canonical" href="https://lieferando.cc/tools/influencer-offer-comparator/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="مقارن عروض المؤثرين | Influence Gulf">
+  <meta property="og:description" content="قارن حتى خمسة عروض فعلية للمؤثرين وحوّل الأرقام المتفرقة إلى قرار واضح.">
+  <meta property="og:url" content="https://lieferando.cc/tools/influencer-offer-comparator/">
+  <meta property="og:site_name" content="Influence Gulf">
+  <meta property="og:locale" content="ar_AR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="مقارن عروض المؤثرين">
+  <meta name="twitter:description" content="قارن تكلفة المشاهدة والتفاعل والنقرة والطلب وملاءمة الجمهور باستخدام بياناتك أنت.">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"مقارن عروض المؤثرين",
+    "url":"https://lieferando.cc/tools/influencer-offer-comparator/",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Any",
+    "inLanguage":"ar",
+    "isAccessibleForFree":true,
+    "description":"أداة تعمل داخل المتصفح لمقارنة عروض التسويق عبر المؤثرين باستخدام بيانات الأسعار والأداء وملاءمة الجمهور التي يدخلها المستخدم.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"SAR"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://lieferando.cc/"},
+      {"@type":"ListItem","position":2,"name":"الأدوات","item":"https://lieferando.cc/tools/"},
+      {"@type":"ListItem","position":3,"name":"مقارن عروض المؤثرين","item":"https://lieferando.cc/tools/influencer-offer-comparator/"}
+    ]
+  }
+  </script>
+  <style>
+    .tool-wrap{max-width:1120px;margin:auto}
+    .tool-intro{max-width:900px;margin:0 auto 28px}
+    .privacy-note{display:flex;gap:12px;align-items:flex-start;padding:17px 20px;border:1px solid #bbf7d0;background:#f0fdf4;color:#166534;border-radius:16px;line-height:1.8;margin:24px 0}
+    .privacy-note strong{display:block;margin-bottom:2px}
+    .tool-panel{background:#fff;border:1px solid #dbe3ee;border-radius:20px;padding:24px;margin:22px 0;box-shadow:0 12px 32px rgba(15,23,42,.045)}
+    .tool-panel h2{margin-top:0}
+    .tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+    .tool-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+    .tool-field label{font-weight:800;color:#263449}
+    .tool-field input,.tool-field select{width:100%;min-width:0;border:1px solid #cbd5e1;border-radius:11px;padding:12px 13px;background:#fff;color:#101828;font:inherit}
+    .tool-field input:focus,.tool-field select:focus{outline:3px solid rgba(245,158,11,.23);border-color:#d97706}
+    .field-help{font-size:.85rem;line-height:1.65;color:#64748b}
+    .section-label{font-size:.93rem;font-weight:900;color:#9a3412;margin:23px 0 12px;padding-bottom:7px;border-bottom:1px solid #ffedd5}
+    .creators-list{display:grid;gap:18px}
+    .creator-card{border:1px solid #dbe3ee;border-radius:18px;padding:20px;background:linear-gradient(180deg,#fff,#fbfdff);position:relative}
+    .creator-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+    .creator-head h3{margin:0;font-size:1.1rem}
+    .creator-number{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff7ed;color:#9a3412;font-weight:900;margin-left:8px}
+    .creator-head-actions{display:flex;align-items:center;gap:8px}
+    .remove-creator{border:1px solid #fecaca;background:#fff;color:#b91c1c;border-radius:10px;padding:8px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+    .tool-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .button-light{border:1px solid #cbd5e1;background:#fff;color:#1e293b;border-radius:999px;padding:12px 18px;font:inherit;font-weight:800;cursor:pointer}
+    .button-light:hover{background:#f8fafc}
+    .tool-primary{cursor:pointer}
+    .goal-note{background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;border-radius:14px;padding:15px 18px;line-height:1.8;margin:16px 0 0}
+    .result-summary{padding:18px 20px;border-radius:16px;background:#0f172a;color:#f8fafc;margin-bottom:18px;line-height:1.85}
+    .result-summary strong{color:#fde68a}
+    .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .result-card{border:1px solid #dbe3ee;border-radius:18px;padding:18px;background:#fff;min-width:0}
+    .result-card.best{border:2px solid #f59e0b;box-shadow:0 12px 35px rgba(245,158,11,.12)}
+    .result-card h3{margin:0 0 7px;overflow-wrap:anywhere}
+    .result-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .result-badge{display:inline-block;background:#fff7ed;color:#9a3412;border-radius:999px;padding:5px 9px;font-size:.78rem;font-weight:900;white-space:nowrap}
+    .result-score{font-size:1.7rem;font-weight:900;color:#0f172a;margin:12px 0 4px}
+    .result-score small{font-size:.82rem;color:#64748b;font-weight:700}
+    .result-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .metric{padding:11px;border-radius:12px;background:#f8fafc;min-width:0}
+    .metric span{display:block;font-size:.8rem;color:#64748b;line-height:1.5}
+    .metric strong{display:block;margin-top:4px;font-size:1rem;color:#0f172a;overflow-wrap:anywhere}
+    .fitbar{height:7px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin-top:9px}
+    .fitbar span{display:block;height:100%;background:linear-gradient(90deg,#f97316,#f59e0b);border-radius:999px}
+    .result-reason{font-size:.9rem;line-height:1.75;color:#475569;margin:13px 0 0}
+    .result-table-wrap{overflow-x:auto;margin-top:24px}
+    .result-table{border-collapse:collapse;width:100%;min-width:760px}
+    .result-table th,.result-table td{padding:13px 12px;border-bottom:1px solid #e2e8f0;text-align:right;vertical-align:top}
+    .result-table th{background:#f8fafc;color:#334155;font-size:.9rem}
+    .result-table td{font-size:.9rem}
+    .score-legend{font-size:.9rem;color:#64748b;line-height:1.8;margin-top:16px}
+    .validation{display:none;margin:14px 0;padding:14px 16px;border-radius:12px;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;line-height:1.8}
+    .validation.show{display:block}
+    .empty-results{border:1px dashed #cbd5e1;border-radius:16px;padding:24px;text-align:center;line-height:1.9;color:#64748b}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .step-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:16px}
+    .step-card strong{display:block;color:#0f172a;margin-bottom:7px}
+    .tool-panel a{color:#b45309;font-weight:800}
+    .tool-panel li{margin-bottom:9px;line-height:1.8}
+    .faq-item{padding:16px 0;border-bottom:1px solid #e2e8f0}
+    .faq-item:last-child{border-bottom:0}
+    .faq-item h3{margin:0 0 8px;font-size:1.05rem}
+    .faq-item p{margin:0;color:#475569;line-height:1.9}
+    .fineprint{font-size:.9rem;color:#64748b;line-height:1.9}
+    @media(max-width:650px){
+      .tool-panel{padding:17px;margin:16px 0;border-radius:16px}
+      .creator-card{padding:15px}
+      .creator-head{align-items:flex-start}
+      .tool-actions>*{width:100%;justify-content:center}
+      .result-metrics{gap:8px}
+      .metric{padding:9px}
+      .result-summary{padding:16px}
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="/">Influence Gulf <span>التسويق عبر المؤثرين</span></a>
+      <nav class="nav-links">
+        <a href="/">الرئيسية</a>
+        <a href="/services/">الخدمات</a>
+        <a href="/blog/">المقالات</a>
+        <a class="active" href="/tools/">الأدوات</a>
+        <a href="/about/">عن المنصة</a>
+      </nav>
+      <a class="nav-cta" href="/#contact">تواصل معنا</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="/">الرئيسية</a> / <a href="/tools/">الأدوات</a> / مقارنة عروض المؤثرين</div>
+        <h1>مقارن عروض المؤثرين: اختر بالأرقام لا بالانطباع</h1>
+        <p class="lead">أدخل عروض المؤثرين التي حصلت عليها وقارن كلفة الوصول والتفاعل والنقرات والطلبات، ثم راجع ملاءمة الجمهور وجودة المحتوى ووضوح حقوق الاستخدام في تقرير واحد. الأداة لا تخمّن أسعار السوق؛ بل تحلل الأرقام التي تقدمها أنت.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container tool-wrap">
+        <div class="tool-intro">
+          <div class="privacy-note" role="note">
+            <span aria-hidden="true">🔒</span>
+            <div><strong>خصوصية المدخلات</strong>تعمل المقارنة داخل متصفحك. لا ترسل هذه الصفحة بيانات العروض إلى خادم ولا تحفظها في حساب أو قاعدة بيانات. عند تنزيل التقرير، يُنشأ الملف على جهازك فقط. تجنب إدخال معلومات شخصية أو سرية لا تحتاجها للمقارنة.</div>
+          </div>
+          <p>هذه الأداة مخصصة للشركات والمتاجر والوكالات التي لديها عرضان أو أكثر. للحصول على مقارنة عادلة، أدخل أرقامًا متقاربة المصدر: مثل متوسط آخر 5–10 منشورات مماثلة لكل مؤثر، لا أفضل فيديو انتشر لديه فقط.</p>
+        </div>
+
+        <form id="comparisonForm" novalidate>
+          <section class="tool-panel">
+            <h2>1. حدّد هدف المقارنة</h2>
+            <div class="tool-grid">
+              <div class="tool-field">
+                <label for="objective">الهدف الأساسي للحملة</label>
+                <select id="objective" name="objective">
+                  <option value="awareness">زيادة الوعي والوصول</option>
+                  <option value="engagement">زيادة التفاعل</option>
+                  <option value="traffic">جلب الزيارات والنقرات</option>
+                  <option value="sales">زيادة الطلبات والمبيعات</option>
+                </select>
+                <span class="field-help">الهدف يحدد المؤشرات الداخلة في درجة المقارنة؛ غيّره إذا كانت أولويتك مختلفة.</span>
+              </div>
+              <div class="tool-field">
+                <label for="currency">عملة المقارنة</label>
+                <select id="currency" name="currency">
+                  <option value="SAR">ريال سعودي (ر.س)</option>
+                  <option value="AED">درهم إماراتي (د.إ)</option>
+                  <option value="KWD">دينار كويتي (د.ك)</option>
+                  <option value="QAR">ريال قطري (ر.ق)</option>
+                  <option value="BHD">دينار بحريني (د.ب)</option>
+                  <option value="OMR">ريال عُماني (ر.ع)</option>
+                </select>
+                <span class="field-help">حوّل العروض إلى عملة واحدة بنفسك قبل إدخالها؛ الأداة لا تنفّذ تحويل العملات.</span>
+              </div>
+            </div>
+            <div class="goal-note" id="goalNote">في هدف الوعي، نقارن كلفة كل ألف مشاهدة تقديرية وحجم المشاهدات بالملاءمة النوعية التي تقيّمها.</div>
+          </section>
+
+          <section class="tool-panel">
+            <h2>2. أدخل عروض المؤثرين</h2>
+            <p class="fineprint">أضف عرضين على الأقل، ويمكنك مقارنة خمسة عروض كحد أقصى. «تكلفة العرض» ينبغي أن تشمل المبلغ المطلوب دفعه وكل تكلفة تريد احتسابها، بما فيها حقوق الاستخدام والإنتاج الإضافي إن كانت ضمن الصفقة.</p>
+            <div id="validation" class="validation" role="alert"></div>
+            <div id="creatorsList" class="creators-list"></div>
+            <div class="tool-actions">
+              <button class="button-light" type="button" id="addCreator">+ إضافة عرض آخر</button>
+              <button class="button-light" type="button" id="loadSample">جرّب مثالًا توضيحيًا</button>
+              <button class="button-light" type="button" id="resetTool">مسح وإعادة البدء</button>
+              <button class="btn btn-primary tool-primary" type="submit" id="compareBtn">قارن العروض الآن</button>
+            </div>
+            <p class="fineprint">الحقول والأرقام التجريبية ليست أسعارًا مرجعية للسوق؛ استخدم بيانات عروضك الفعلية أو بيانات أداء موثقة من حملات سابقة.</p>
+          </section>
+        </form>
+
+        <section class="tool-panel" id="resultsPanel" aria-live="polite" aria-atomic="false">
+          <h2>3. نتيجة المقارنة</h2>
+          <div id="resultsPlaceholder" class="empty-results">أدخل بيانات عرضين على الأقل ثم اضغط «قارن العروض الآن». ستظهر هنا المقاييس المحسوبة، ومؤشر الملاءمة، ودرجة المقارنة بحسب الهدف.</div>
+          <div id="results" hidden></div>
+          <div class="tool-actions" id="exportActions" hidden>
+            <button class="btn btn-primary" type="button" id="downloadCsv">تنزيل تقرير المقارنة CSV</button>
+            <button class="button-light" type="button" id="copyReport">نسخ ملخص المقارنة</button>
+          </div>
+          <p class="fineprint">درجة المقارنة نسبية بين العروض التي أدخلتها في هذه الصفحة وليست ترتيبًا عامًا للمؤثرين في السوق ولا ضمانًا للنتائج. تقديرات المشاهدات والنقرات والطلبات ليست تعهدًا بالأداء الفعلي.</p>
+        </section>
+
+        <section class="tool-panel">
+          <h2>كيف تقرأ النتائج؟</h2>
+          <div class="steps-grid">
+            <div class="step-card"><strong>كلفة كل ألف مشاهدة (CPM)</strong><span>التكلفة الإجمالية ÷ إجمالي المشاهدات التقديرية × 1000. الأقل أقل تكلفة لكل ألف مشاهدة وفق المدخلات.</span></div>
+            <div class="step-card"><strong>معدل المشاهدة إلى المتابعين</strong><span>متوسط المشاهدات لكل قطعة ÷ عدد المتابعين. مؤشر وصفي وليس دليلًا مستقلًا على أصالة الجمهور.</span></div>
+            <div class="step-card"><strong>معدل التفاعل حسب المشاهدات</strong><span>متوسط الإعجابات والتعليقات والتفاعلات التي أدخلتها ÷ متوسط المشاهدات. قارِن المنصات بحذر لأن تعريفاتها تختلف.</span></div>
+            <div class="step-card"><strong>مؤشر الملاءمة النوعية</strong><span>تقييمك لملاءمة الجمهور والمحتوى وسلامة العلامة وشفافية البيانات ووضوح الحقوق. هذا تقييم إدخالي وليس فحصًا آليًا للحساب.</span></div>
+          </div>
+          <h3>كيف تُحسب درجة المقارنة؟</h3>
+          <p>تستخدم الأداة هدف الحملة لتحديد وزن المؤشرات. في الوعي: كلفة الألف مشاهدة وحجم المشاهدات والملاءمة. في التفاعل: كلفة التفاعل ومعدل التفاعل والملاءمة. في الزيارات: تكلفة النقرة والملاءمة، وفي المبيعات: تكلفة الطلب المنسوب والملاءمة. إذا لم تدخل بيانات النقرات أو الطلبات لجميع العروض، لن تصنع الأداة ترتيبًا مزيفًا لهذين الهدفين.</p>
+          <p class="fineprint">درجة الملاءمة تتكون من تقييماتك من 1 إلى 5: ملاءمة الجمهور (30%)، جودة المحتوى (20%)، السلامة والثقة (20%)، شفافية بيانات الأداء (15%)، ووضوح حقوق الاستخدام والاتفاق (15%). الدرجة الإجمالية تمزج مؤشرات الكفاءة القابلة للحساب مع هذه التقييمات وفق الأوزان الموضحة في التقرير.</p>
+        </section>
+
+        <section class="tool-panel">
+          <h2>استخدم الأداة مع أدلة التخطيط</h2>
+          <ul>
+            <li><a href="/blog/كيف-تختار-المؤثر-المناسب-لعلامتك-التجارية/">دليل اختيار المؤثر المناسب لعلامتك التجارية</a> — لفهم ملاءمة الجمهور والمحتوى قبل تقييم الأرقام.</li>
+            <li><a href="/blog/تتبع-حملات-المؤثرين-باستخدام-روابط-utm-و-ga4/">دليل تتبع حملات المؤثرين باستخدام UTM وGoogle Analytics 4</a> — لبناء طريقة قياس بعد إطلاق الحملة.</li>
+            <li><a href="/blog/حقوق-استخدام-محتوى-المؤثرين-بعد-النشر/">حقوق استخدام محتوى المؤثرين بعد النشر</a> — لتحديد حقوق الإعلان المدفوع وإعادة النشر قبل احتساب التكلفة النهائية.</li>
+            <li><a href="/tools/influencer-campaign-calculator/">حاسبة ميزانية حملة المؤثرين</a> — لتخطيط الميزانية بعد مراجعة العروض.</li>
+          </ul>
+        </section>
+
+        <section class="tool-panel">
+          <h2>أسئلة شائعة</h2>
+          <div class="faq-item"><h3>هل الأداة تكشف المتابعين الوهميين؟</h3><p>لا. الأداة لا تتصل بحسابات المؤثرين ولا تجمع بيانات عامة. تساعدك في مقارنة الأرقام التي أدخلتها، ويجب فحص جودة الجمهور من أدلة مستقلة مثل توزيع الجمهور وجودة التعليقات واتساق أداء المنشورات.</p></div>
+          <div class="faq-item"><h3>هل درجة 90 تعني أن المؤثر سيحقق نتائج أفضل؟</h3><p>لا. الدرجة تلخص المدخلات والأوزان الحالية داخل قائمتك فقط. لا تضمن أداءً مستقبلًا ولا تقارن تلقائيًا مع السوق. قد تتغير النتيجة عند تغيير الهدف أو التقييمات أو العروض المشمولة.</p></div>
+          <div class="faq-item"><h3>ماذا لو لم أملك بيانات نقرات أو طلبات سابقة؟</h3><p>ابدأ بهدف الوعي أو التفاعل إذا كانت بيانات المشاهدات والتفاعلات لديك موثوقة. لا تستخدم درجة المبيعات أو الزيارات قبل توفر بيانات قابلة للمقارنة لكل عرض، ويمكنك جمعها في اختبار صغير مع روابط تتبع لكل مؤثر.</p></div>
+          <div class="faq-item"><h3>هل تُحفظ أسماء المؤثرين والأسعار التي أدخلها؟</h3><p>لا تحفظها هذه الصفحة في قاعدة بيانات ولا ترسلها عبر طلب شبكة. تبقى المدخلات في ذاكرة الصفحة خلال الاستخدام الحالي. تنزيل CSV أو نسخ الملخص يتم بناءً على طلبك.</p></div>
+        </section>
+
+        <p class="fineprint">منهجية الأداة: صُممت لتوحيد طريقة مقارنة العروض المدخلة، لا لتقديم أسعار سوقية أو التحقق المستقل من صحة بيانات أي مؤثر. استخدم بيانات متقاربة الفترة والنوع، وراجع شروط الاتفاق والإفصاح الإعلاني والقواعد المطبقة في سوقك قبل إطلاق الحملة.</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>Influence Gulf — أدوات وأدلة عملية للتسويق عبر المؤثرين.</p>
+      <p><a href="/">الرئيسية</a> · <a href="/about/">عن المنصة</a> · <a href="/blog/">المقالات</a> · <a href="/tools/">الأدوات المجانية</a> · <a href="/privacy-policy/">سياسة الخصوصية</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    "use strict";
+    const $ = function(id){ return document.getElementById(id); };
+    const list = $("creatorsList");
+    const objective = $("objective");
+    const currency = $("currency");
+    const validation = $("validation");
+    const results = $("results");
+    const placeholder = $("resultsPlaceholder");
+    const exportActions = $("exportActions");
+    let cardSeq = 0;
+    let latest = null;
+    let dirty = true;
+    const currencyLabels = {SAR:"ر.س",AED:"د.إ",KWD:"د.ك",QAR:"ر.ق",BHD:"د.ب",OMR:"ر.ع"};
+    const goalLabels = {awareness:"زيادة الوعي والوصول",engagement:"زيادة التفاعل",traffic:"جلب الزيارات والنقرات",sales:"زيادة الطلبات والمبيعات"};
+    const goalNotes = {
+      awareness:"في هدف الوعي، نقارن كلفة كل ألف مشاهدة تقديرية وحجم المشاهدات بالملاءمة النوعية التي تقيّمها.",
+      engagement:"في هدف التفاعل، نقارن كلفة التفاعل ومعدل التفاعل المحسوب من بياناتك، مع ملاءمة الجمهور وجودة المحتوى.",
+      traffic:"في هدف الزيارات، تُحسب الدرجة فقط عند إدخال متوسط نقرات قابل للمقارنة لكل عرض. لا تخلط نقرات المنصة بالنقرات المسجلة في موقعك دون مراجعة تعريف القياس.",
+      sales:"في هدف المبيعات، تُحسب الدرجة فقط عند إدخال متوسط طلبات منسوبة وقابلة للمقارنة لكل عرض. إذا لم تملك هذه البيانات، لا تستنتج مبيعات من المشاهدات وحدها."
+    };
+    function esc(value){
+      return String(value==null?"":value).replace(/[&<>"']/g,function(ch){
+        return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch];
+      });
+    }
+    function num(value){
+      if(value===null || value===undefined || String(value).trim()==="") return null;
+      const n = Number(value);
+      return Number.isFinite(n) && n>=0 ? n : null;
+    }
+    function fmt(value, decimals){
+      if(value===null || value===undefined || !Number.isFinite(value)) return "—";
+      return value.toLocaleString("en-US",{maximumFractionDigits:decimals===undefined?1:decimals,minimumFractionDigits:0});
+    }
+    function money(value){
+      if(value===null || value===undefined || !Number.isFinite(value)) return "—";
+      return fmt(value,2)+" "+(currencyLabels[currency.value]||currency.value);
+    }
+    function selectedRating(value, selected){
+      return Number(value)===Number(selected) ? " selected" : "";
+    }
+    function ratingOptions(label, key, selected){
+      let out = '<label class="tool-field"><span>'+label+'</span><select data-field="'+key+'">';
+      for(let i=1;i<=5;i++) out += '<option value="'+i+'"'+selectedRating(i,selected)+'>'+i+(i===1?" — ضعيف جدًا":i===3?" — متوسط":i===5?" — قوي جدًا":"")+'</option>';
+      return out+'</select><span class="field-help">قيّم من 1 (ضعيف) إلى 5 (قوي).</span></label>';
+    }
+    function addCreator(data){
+      data = data || {};
+      const count = list.querySelectorAll(".creator-card").length;
+      if(count>=5){showError("يمكن مقارنة خمسة عروض كحد أقصى في المقارنة الواحدة.");return;}
+      cardSeq++;
+      const id = "creator-"+cardSeq;
+      const card = document.createElement("article");
+      card.className = "creator-card";
+      card.dataset.id = id;
+      const platform = data.platform || "instagram";
+      card.innerHTML =
+        '<div class="creator-head"><h3><span class="creator-number">'+(count+1)+'</span>العرض '+(count+1)+'</h3><div class="creator-head-actions"><button type="button" class="remove-creator" aria-label="حذف العرض '+(count+1)+'" data-remove>حذف العرض</button></div></div>'+
+        '<div class="tool-grid">'+
+          '<div class="tool-field"><label for="'+id+'-name">اسم المؤثر أو رمز العرض *</label><input id="'+id+'-name" data-field="name" type="text" maxlength="100" required value="'+esc(data.name||"")+'" placeholder="مثال: عرض A"></div>'+
+          '<div class="tool-field"><label for="'+id+'-platform">المنصة</label><select id="'+id+'-platform" data-field="platform"><option value="instagram"'+(platform==="instagram"?" selected":"")+'>إنستغرام</option><option value="tiktok"'+(platform==="tiktok"?" selected":"")+'>تيك توك</option><option value="snapchat"'+(platform==="snapchat"?" selected":"")+'>سناب شات</option><option value="youtube"'+(platform==="youtube"?" selected":"")+'>يوتيوب</option><option value="x"'+(platform==="x"?" selected":"")+'>إكس</option><option value="other"'+(platform==="other"?" selected":"")+'>أخرى</option></select></div>'+
+          '<div class="tool-field"><label for="'+id+'-followers">عدد المتابعين *</label><input id="'+id+'-followers" data-field="followers" type="number" min="1" step="1" required value="'+esc(data.followers==null?"":data.followers)+'" placeholder="مثال: 50000"></div>'+
+          '<div class="tool-field"><label for="'+id+'-views">متوسط المشاهدات لكل محتوى *</label><input id="'+id+'-views" data-field="views" type="number" min="1" step="any" required value="'+esc(data.views==null?"":data.views)+'" placeholder="متوسط آخر 5–10 منشورات مماثلة"></div>'+
+          '<div class="tool-field"><label for="'+id+'-engagements">متوسط التفاعلات لكل محتوى *</label><input id="'+id+'-engagements" data-field="engagements" type="number" min="0" step="any" required value="'+esc(data.engagements==null?"":data.engagements)+'" placeholder="إعجابات + تعليقات + تفاعلات متاحة"><span class="field-help">استخدم تعريفًا واحدًا لجميع العروض، بحسب البيانات المتاحة للمنصة.</span></div>'+
+          '<div class="tool-field"><label for="'+id+'-deliverables">عدد قطع المحتوى في العرض *</label><input id="'+id+'-deliverables" data-field="deliverables" type="number" min="1" max="1000" step="1" required value="'+esc(data.deliverables==null?1:data.deliverables)+'"></div>'+
+          '<div class="tool-field"><label for="'+id+'-cost">إجمالي تكلفة العرض ('+(currencyLabels[currency.value]||"العملة المختارة")+') *</label><input id="'+id+'-cost" data-field="cost" type="number" min="0.01" step="any" required value="'+esc(data.cost==null?"":data.cost)+'" placeholder="يشمل الحقوق والتكاليف التي تريد احتسابها"></div>'+
+          '<div class="tool-field"><label for="'+id+'-clicks">متوسط النقرات المنسوبة لكل محتوى</label><input id="'+id+'-clicks" data-field="clicks" type="number" min="0" step="any" value="'+esc(data.clicks==null?"":data.clicks)+'" placeholder="اختياري، اتركه فارغًا إذا لم تتوفر البيانات"><span class="field-help">للمقارنة بهدف الزيارات، استخدم المصدر نفسه وتعريف نقرات موحدًا.</span></div>'+
+          '<div class="tool-field"><label for="'+id+'-orders">متوسط الطلبات المنسوبة لكل محتوى</label><input id="'+id+'-orders" data-field="orders" type="number" min="0" step="any" value="'+esc(data.orders==null?"":data.orders)+'" placeholder="اختياري، من حملات سابقة قابلة للمقارنة"><span class="field-help">لا تدخل تنبؤًا متفائلًا؛ استخدم سجلًا سابقًا أو اتركه فارغًا.</span></div>'+
+        '</div>'+
+        '<div class="section-label">تقييم نوعي — اكتب تقييمًا محافظًا مبنيًا على مراجعتك</div>'+
+        '<div class="tool-grid">'+
+          ratingOptions("ملاءمة الجمهور المستهدف","audienceFit",data.audienceFit||3)+
+          ratingOptions("جودة المحتوى وملاءمة العلامة","contentFit",data.contentFit||3)+
+          ratingOptions("الثقة وسلامة العلامة","brandSafety",data.brandSafety||3)+
+          ratingOptions("شفافية بيانات الأداء","dataQuality",data.dataQuality||3)+
+          ratingOptions("وضوح حقوق الاستخدام والاتفاق","rightsClarity",data.rightsClarity||3)+
+        '</div>';
+      list.appendChild(card);
+      renumberCards();
+      markDirty();
+    }
+    function renumberCards(){
+      const cards = Array.from(list.querySelectorAll(".creator-card"));
+      cards.forEach(function(card,index){
+        const title = card.querySelector(".creator-head h3");
+        title.innerHTML = '<span class="creator-number">'+(index+1)+'</span>العرض '+(index+1);
+        const btn = card.querySelector("[data-remove]");
+        btn.setAttribute("aria-label","حذف العرض "+(index+1));
+        btn.disabled = cards.length<=2;
+        btn.style.opacity = cards.length<=2?".45":"1";
+        btn.style.cursor = cards.length<=2?"not-allowed":"pointer";
+      });
+      $("addCreator").disabled = cards.length>=5;
+      $("addCreator").style.opacity = cards.length>=5?".45":"1";
+    }
+    function showError(message){
+      validation.textContent = message;
+      validation.classList.add("show");
+    }
+    function clearError(){
+      validation.textContent = "";
+      validation.classList.remove("show");
+    }
+    function markDirty(){
+      dirty = true;
+      latest = null;
+      exportActions.hidden = true;
+      if(!placeholder.hidden) return;
+      placeholder.hidden = false;
+      placeholder.textContent = "تغيرت بعض المدخلات. اضغط «قارن العروض الآن» لتحديث النتائج قبل تنزيل التقرير.";
+    }
+    function readCards(){
+      const cards = Array.from(list.querySelectorAll(".creator-card"));
+      const entries = [];
+      const problems = [];
+      cards.forEach(function(card,index){
+        const v = {};
+        card.querySelectorAll("[data-field]").forEach(function(input){v[input.dataset.field]=input.value.trim();});
+        const n = index+1;
+        if(!v.name) problems.push("العرض "+n+": أدخل اسمًا أو رمزًا يميّز العرض.");
+        const followers=num(v.followers), views=num(v.views), engagements=num(v.engagements), deliverables=num(v.deliverables), cost=num(v.cost);
+        if(followers===null || followers<=0) problems.push("العرض "+n+": عدد المتابعين يجب أن يكون أكبر من صفر.");
+        if(views===null || views<=0) problems.push("العرض "+n+": أدخل متوسط مشاهدات أكبر من صفر.");
+        if(engagements===null) problems.push("العرض "+n+": أدخل متوسط التفاعلات؛ استخدم صفرًا إذا لم يُسجل أي تفاعل.");
+        if(deliverables===null || deliverables<1 || !Number.isInteger(deliverables)) problems.push("العرض "+n+": عدد قطع المحتوى يجب أن يكون عددًا صحيحًا يبدأ من 1.");
+        if(cost===null || cost<=0) problems.push("العرض "+n+": أدخل تكلفة إجمالية أكبر من صفر.");
+        const clicksRaw=v.clicks===""?null:num(v.clicks);
+        const ordersRaw=v.orders===""?null:num(v.orders);
+        if(v.clicks!=="" && clicksRaw===null) problems.push("العرض "+n+": النقرات يجب أن تكون صفرًا أو أكثر.");
+        if(v.orders!=="" && ordersRaw===null) problems.push("العرض "+n+": الطلبات يجب أن تكون صفرًا أو أكثر.");
+        if(followers!==null && views!==null && views>0 && engagements!==null){
+          entries.push({
+            name:v.name,platform:v.platform,followers:followers,views:views,engagements:engagements,
+            deliverables:deliverables,cost:cost,clicks:clicksRaw,orders:ordersRaw,
+            audienceFit:Number(v.audienceFit),contentFit:Number(v.contentFit),brandSafety:Number(v.brandSafety),
+            dataQuality:Number(v.dataQuality),rightsClarity:Number(v.rightsClarity),formIndex:index
+          });
+        }else if(followers!==null && views!==null && engagements!==null){
+          entries.push({name:v.name,platform:v.platform,followers:followers,views:views,engagements:engagements,deliverables:deliverables,cost:cost,clicks:clicksRaw,orders:ordersRaw,audienceFit:Number(v.audienceFit),contentFit:Number(v.contentFit),brandSafety:Number(v.brandSafety),dataQuality:Number(v.dataQuality),rightsClarity:Number(v.rightsClarity),formIndex:index});
+        }
+      });
+      if(cards.length<2) problems.push("أدخل عرضين على الأقل حتى تكون هناك مقارنة.");
+      if(new Set(entries.map(function(e){return e.name.toLocaleLowerCase();})).size<entries.length) problems.push("استخدم اسمًا أو رمزًا مختلفًا لكل عرض حتى لا تختلط النتائج.");
+      return {entries:entries,problems:problems};
+    }
+    function calculate(entry){
+      const viewsTotal=entry.views*entry.deliverables;
+      const engagementsTotal=entry.engagements*entry.deliverables;
+      const clicksTotal=entry.clicks===null?null:entry.clicks*entry.deliverables;
+      const ordersTotal=entry.orders===null?null:entry.orders*entry.deliverables;
+      const cpm=viewsTotal>0?entry.cost/viewsTotal*1000:null;
+      const cpe=engagementsTotal>0?entry.cost/engagementsTotal:null;
+      const cpc=clicksTotal!==null && clicksTotal>0?entry.cost/clicksTotal:null;
+      const cpo=ordersTotal!==null && ordersTotal>0?entry.cost/ordersTotal:null;
+      const viewRate=entry.followers>0?entry.views/entry.followers*100:null;
+      const engagementRate=entry.views>0?entry.engagements/entry.views*100:null;
+      const fit=(entry.audienceFit*30+entry.contentFit*20+entry.brandSafety*20+entry.dataQuality*15+entry.rightsClarity*15)/5;
+      return Object.assign({},entry,{viewsTotal:viewsTotal,engagementsTotal:engagementsTotal,clicksTotal:clicksTotal,ordersTotal:ordersTotal,cpm:cpm,cpe:cpe,cpc:cpc,cpo:cpo,viewRate:viewRate,engagementRate:engagementRate,fit:fit});
+    }
+    function higherScores(entries,key){
+      const vals=entries.map(function(e){return e[key];}).filter(function(v){return Number.isFinite(v);});
+      const best=vals.length?Math.max.apply(null,vals):0;
+      return entries.map(function(e){return best>0 && Number.isFinite(e[key])?Math.min(100,Math.max(0,e[key]/best*100)):0;});
+    }
+    function lowerScores(entries,key,zeroKey){
+      const vals=entries.map(function(e){return e[key];}).filter(function(v){return Number.isFinite(v)&&v>0;});
+      const best=vals.length?Math.min.apply(null,vals):null;
+      return entries.map(function(e){
+        if(zeroKey && e[zeroKey]===0) return 0;
+        return best!==null && Number.isFinite(e[key]) && e[key]>0?Math.min(100,Math.max(0,best/e[key]*100)):0;
+      });
+    }
+    function computeScores(entries){
+      const goal=objective.value;
+      const cpmS=lowerScores(entries,"cpm");
+      const viewsS=higherScores(entries,"viewsTotal");
+      const cpeS=lowerScores(entries,"cpe","engagementsTotal");
+      const erS=higherScores(entries,"engagementRate");
+      const clicksComplete=entries.every(function(e){return e.clicksTotal!==null;});
+      const ordersComplete=entries.every(function(e){return e.ordersTotal!==null;});
+      const cpcS=lowerScores(entries,"cpc","clicksTotal");
+      const cpoS=lowerScores(entries,"cpo","ordersTotal");
+      return entries.map(function(e,i){
+        let score=null, method="";
+        if(goal==="awareness"){
+          score=cpmS[i]*.30+viewsS[i]*.30+e.fit*.40;
+          method="30% كفاءة CPM + 30% حجم المشاهدات + 40% الملاءمة النوعية";
+        }else if(goal==="engagement"){
+          score=cpeS[i]*.30+erS[i]*.30+e.fit*.40;
+          method="30% كفاءة تكلفة التفاعل + 30% معدل التفاعل + 40% الملاءمة النوعية";
+        }else if(goal==="traffic" && clicksComplete){
+          score=cpcS[i]*.60+e.fit*.40;
+          method="60% كفاءة تكلفة النقرة + 40% الملاءمة النوعية";
+        }else if(goal==="sales" && ordersComplete){
+          score=cpoS[i]*.60+e.fit*.40;
+          method="60% كفاءة تكلفة الطلب المنسوب + 40% الملاءمة النوعية";
+        }
+        return Object.assign({},e,{score:score,scoreMethod:method,clicksComplete:clicksComplete,ordersComplete:ordersComplete,cpmScore:cpmS[i],viewsScore:viewsS[i],cpeScore:cpeS[i],erScore:erS[i],cpcScore:cpcS[i],cpoScore:cpoS[i]});
+      });
+    }
+    function metric(label,value){
+      return '<div class="metric"><span>'+label+'</span><strong>'+value+'</strong></div>';
+    }
+    function creatorPlatform(value){
+      const names={instagram:"إنستغرام",tiktok:"تيك توك",snapchat:"سناب شات",youtube:"يوتيوب",x:"إكس",other:"أخرى"};
+      return names[value]||value;
+    }
+    function reasonText(e,goal){
+      if(goal==="awareness") return "كلفة الألف مشاهدة محسوبة من تكلفة العرض وإجمالي المشاهدات التقديرية. تقدير المشاهدات ليس ضمانًا.";
+      if(goal==="engagement") return "معدل التفاعل يستخدم متوسط التفاعلات ÷ متوسط المشاهدات؛ قارن بنفس التعريف ونفس نوع المحتوى قدر الإمكان.";
+      if(goal==="traffic") return e.clicksTotal===null?"لم تدخل بيانات نقرات؛ لا يمكن حساب درجة عادلة لهدف الزيارات.":e.clicksTotal===0?"أدخلت صفر نقرات؛ لا يمكن حساب تكلفة نقرة موجبة، وتعامل معها كإشارة تحتاج التحقيق.":"تكلفة النقرة مبنية على النقرات التي أدخلتها وليست من مصدر خارجي.";
+      return e.ordersTotal===null?"لم تدخل بيانات طلبات منسوبة؛ لا يمكن حساب درجة عادلة لهدف المبيعات.":e.ordersTotal===0?"أدخلت صفر طلبات؛ لا يمكن حساب تكلفة طلب، ولا ينبغي تعويضها بتوقع غير موثق.":"تكلفة الطلب مبنية على عدد الطلبات الذي أدخلته، ولا تعني ضمان تكرار الأداء.";
+    }
+    function renderResults(entries){
+      const goal=objective.value;
+      const complete = entries.every(function(e){return e.score!==null;});
+      const sorted = entries.slice().sort(function(a,b){
+        if(a.score===null && b.score!==null)return 1;
+        if(b.score===null && a.score!==null)return -1;
+        if(a.score===null && b.score===null)return b.fit-a.fit;
+        return b.score-a.score;
+      });
+      const highest=complete?Math.max.apply(null,sorted.map(function(e){return e.score;})):null;
+      let summary='<div class="result-summary"><strong>هدف المقارنة: '+esc(goalLabels[goal])+'</strong><br>';
+      if(complete){
+        const tied=sorted.filter(function(e){return Math.abs(e.score-highest)<0.01;});
+        summary+='أعلى درجة نسبية حاليًا: <strong>'+tied.map(function(e){return esc(e.name);}).join("، ")+'</strong> ('+fmt(highest,1)+' من 100). هذه النتيجة تخص العروض المدخلة فقط وتستند إلى الأوزان المعروضة أدناه.';
+      }else{
+        summary+='لا توجد بيانات كافية لترتيب العروض على أساس هذا الهدف. أدخل بيانات '+(goal==="traffic"?"النقرات المنسوبة":"الطلبات المنسوبة")+' لكل عرض؛ ستبقى المؤشرات المتوفرة ودرجة الملاءمة ظاهرة دون ترتيب مضلل.';
+      }
+      summary+='</div>';
+      summary+='<div class="results-grid">';
+      sorted.forEach(function(e){
+        const best=complete && highest!==null && Math.abs(e.score-highest)<0.01;
+        summary+='<article class="result-card'+(best?" best":"")+'"><div class="result-top"><div><h3>'+esc(e.name)+'</h3><span class="field-help">'+esc(creatorPlatform(e.platform))+' · '+fmt(e.deliverables,0)+' قطعة محتوى</span></div>'+(best?'<span class="result-badge">الأعلى وفق البيانات</span>':"")+'</div>';
+        summary+='<div class="result-score">'+(e.score===null?'غير مكتملة':fmt(e.score,1))+' <small>'+(e.score===null?'':'/ 100')+'</small></div>';
+        summary+='<div class="result-metrics">';
+        summary+=metric("التكلفة الإجمالية",money(e.cost));
+        summary+=metric("إجمالي المشاهدات التقديرية",fmt(e.viewsTotal,0));
+        summary+=metric("تكلفة كل 1000 مشاهدة",money(e.cpm));
+        summary+=metric("المشاهدات ÷ المتابعين",fmt(e.viewRate,2)+"%");
+        summary+=metric("التفاعل ÷ المشاهدات",fmt(e.engagementRate,2)+"%");
+        summary+=metric("تكلفة التفاعل",money(e.cpe));
+        summary+=metric("تكلفة النقرة",e.clicksTotal===null?"لم تُدخل":e.clicksTotal===0?"صفر نقرات":money(e.cpc));
+        summary+=metric("تكلفة الطلب",e.ordersTotal===null?"لم تُدخل":e.ordersTotal===0?"صفر طلبات":money(e.cpo));
+        summary+='</div><div style="margin-top:17px"><strong>الملاءمة النوعية: '+fmt(e.fit,1)+'/100</strong><div class="fitbar" role="img" aria-label="درجة الملاءمة '+fmt(e.fit,1)+' من 100"><span style="width:'+Math.max(0,Math.min(100,e.fit))+'%"></span></div></div>';
+        summary+='<p class="result-reason">'+esc(reasonText(e,goal))+'</p></article>';
+      });
+      summary+='</div>';
+      summary+='<div class="result-table-wrap"><table class="result-table"><thead><tr><th>العرض</th><th>التكلفة</th><th>مشاهدات تقديرية</th><th>CPM</th><th>معدل التفاعل</th><th>تكلفة التفاعل</th><th>النقرات التقديرية</th><th>الطلبات التقديرية</th><th>الملاءمة</th><th>درجة المقارنة</th></tr></thead><tbody>';
+      sorted.forEach(function(e){
+        summary+='<tr><td>'+esc(e.name)+'</td><td>'+esc(money(e.cost))+'</td><td>'+fmt(e.viewsTotal,0)+'</td><td>'+esc(money(e.cpm))+'</td><td>'+fmt(e.engagementRate,2)+'%</td><td>'+esc(money(e.cpe))+'</td><td>'+(e.clicksTotal===null?'—':fmt(e.clicksTotal,0))+'</td><td>'+(e.ordersTotal===null?'—':fmt(e.ordersTotal,1))+'</td><td>'+fmt(e.fit,1)+'/100</td><td>'+(e.score===null?'غير مكتملة':fmt(e.score,1)+'/100')+'</td></tr>';
+      });
+      summary+='</tbody></table></div>';
+      summary+='<p class="score-legend"><strong>أوزان الدرجة لهذه المقارنة:</strong> '+esc(sorted[0].scoreMethod||"غير متاحة بسبب نقص بيانات الهدف")+'. درجة الملاءمة النوعية تستخدم تقييماتك أنت؛ درجات كفاءة المقاييس محسوبة نسبيًا مقابل أفضل قيمة في القائمة. المنصة لا تسحب إحصاءات عامة ولا تتحقق من صحة ما أدخلته.</p>';
+      results.innerHTML=summary;
+      results.hidden=false;
+      placeholder.hidden=true;
+      exportActions.hidden=false;
+      latest={goal:goal,goalLabel:goalLabels[goal],currency:currency.value,entries:sorted,complete:complete,generatedAt:new Date().toISOString()};
+      dirty=false;
+    }
+    function compare(event){
+      if(event)event.preventDefault();
+      clearError();
+      const read=readCards();
+      if(read.problems.length){
+        showError(read.problems.join(" "));
+        return;
+      }
+      let entries=read.entries.map(calculate);
+      const goal=objective.value;
+      if(goal==="traffic" && !entries.every(function(e){return e.clicksTotal!==null;})){
+        /* Show individual metrics without creating a ranked composite score. */
+      }
+      if(goal==="sales" && !entries.every(function(e){return e.ordersTotal!==null;})){
+        /* Same rule: missing conversion history means no sales ranking. */
+      }
+      entries=computeScores(entries);
+      renderResults(entries);
+      clearError();
+      $("resultsPanel").scrollIntoView({behavior:"smooth",block:"start"});
+    }
+    function exportCsv(){
+      if(!latest)return;
+      const rows=[
+        ["تقرير مقارنة عروض المؤثرين","Influence Gulf"],
+        ["تاريخ إنشاء التقرير",latest.generatedAt],
+        ["هدف الحملة",latest.goalLabel],
+        ["العملة",latest.currency],
+        [],
+        ["اسم العرض","المنصة","المتابعون","متوسط المشاهدات/قطعة","متوسط التفاعلات/قطعة","عدد القطع","التكلفة الكلية","المشاهدات التقديرية","CPM","معدل المشاهدة/المتابعين %","معدل التفاعل/المشاهدات %","تكلفة التفاعل","النقرات المدخلة/قطعة","النقرات التقديرية","تكلفة النقرة","الطلبات المدخلة/قطعة","الطلبات التقديرية","تكلفة الطلب","الملاءمة/100","درجة المقارنة/100"]
+      ];
+      latest.entries.forEach(function(e){
+        rows.push([e.name,creatorPlatform(e.platform),e.followers,e.views,e.engagements,e.deliverables,e.cost,e.viewsTotal,e.cpm,e.viewRate,e.engagementRate,e.cpe,e.clicks===null?"":e.clicks,e.clicksTotal===null?"":e.clicksTotal,e.cpc===null?"":e.cpc,e.orders===null?"":e.orders,e.ordersTotal===null?"":e.ordersTotal,e.cpo===null?"":e.cpo,e.fit,e.score===null?"":e.score]);
+      });
+      rows.push([]);
+      rows.push(["المنهجية","المقاييس محسوبة من مدخلات المستخدم فقط؛ لا تمثل بيانات سوق موثقة ولا ضمانًا للأداء."]);
+      const csv="\uFEFF"+rows.map(function(row){return row.map(function(value){return '"'+String(value==null?"":value).replace(/"/g,'""')+'"';}).join(",");}).join("\r\n");
+      const blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement("a");
+      a.href=url;a.download="influence-gulf-creator-comparison.csv";
+      document.body.appendChild(a);a.click();a.remove();
+      setTimeout(function(){URL.revokeObjectURL(url);},1000);
+    }
+    function copyText(textValue){
+      const temp=document.createElement("textarea");
+      temp.value=textValue;temp.setAttribute("readonly","");temp.style.position="fixed";temp.style.opacity="0";
+      document.body.appendChild(temp);temp.select();
+      let ok=false;
+      try{ok=document.execCommand("copy");}catch(e){ok=false;}
+      temp.remove();
+      return ok;
+    }
+    function copyReport(){
+      if(!latest)return;
+      const lines=["تقرير مقارنة عروض المؤثرين — Influence Gulf","الهدف: "+latest.goalLabel,"العملة: "+latest.currency,""];
+      latest.entries.forEach(function(e,i){
+        lines.push((i+1)+". "+e.name+" ("+creatorPlatform(e.platform)+")");
+        lines.push("التكلفة: "+money(e.cost)+" | المشاهدات التقديرية: "+fmt(e.viewsTotal,0)+" | CPM: "+money(e.cpm));
+        lines.push("معدل التفاعل: "+fmt(e.engagementRate,2)+"% | تكلفة التفاعل: "+money(e.cpe)+" | الملاءمة: "+fmt(e.fit,1)+"/100 | درجة المقارنة: "+(e.score===null?"غير مكتملة":fmt(e.score,1)+"/100"));
+        lines.push("");
+      });
+      lines.push("تنبيه: النتائج نسبية بين المدخلات ولا تضمن الأداء. البيانات مصدرها المستخدم.");
+      const textValue=lines.join("\n");
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(textValue).then(function(){alert("تم نسخ ملخص المقارنة.");}).catch(function(){alert(copyText(textValue)?"تم نسخ ملخص المقارنة.":"تعذر النسخ تلقائيًا؛ نزّل التقرير CSV بدلًا من ذلك.");});
+      }else{
+        alert(copyText(textValue)?"تم نسخ ملخص المقارنة.":"تعذر النسخ تلقائيًا؛ نزّل التقرير CSV بدلًا من ذلك.");
+      }
+    }
+    function reset(){
+      list.innerHTML="";
+      addCreator();
+      addCreator();
+      objective.value="awareness";
+      currency.value="SAR";
+      $("goalNote").textContent=goalNotes.awareness;
+      results.innerHTML="";
+      results.hidden=true;
+      placeholder.hidden=false;
+      placeholder.textContent="أدخل بيانات عرضين على الأقل ثم اضغط «قارن العروض الآن». ستظهر هنا المقاييس المحسوبة، ومؤشر الملاءمة، ودرجة المقارنة بحسب الهدف.";
+      exportActions.hidden=true;
+      clearError();
+      latest=null;
+      dirty=true;
+    }
+    function sample(){
+      list.innerHTML="";
+      addCreator({name:"مثال توضيحي A",platform:"instagram",followers:82000,views:30000,engagements:2200,deliverables:2,cost:6200,clicks:540,orders:28,audienceFit:5,contentFit:4,brandSafety:5,dataQuality:4,rightsClarity:4});
+      addCreator({name:"مثال توضيحي B",platform:"tiktok",followers:45000,views:22000,engagements:1800,deliverables:2,cost:4700,clicks:420,orders:24,audienceFit:4,contentFit:5,brandSafety:4,dataQuality:4,rightsClarity:5});
+      objective.value="awareness";
+      currency.value="SAR";
+      $("goalNote").textContent=goalNotes.awareness;
+      markDirty();
+      clearError();
+      compare();
+    }
+    objective.addEventListener("change",function(){
+      $("goalNote").textContent=goalNotes[objective.value];
+      markDirty();
+    });
+    currency.addEventListener("change",function(){
+      list.querySelectorAll('[data-field="cost"]').forEach(function(input){
+        const card=input.closest(".creator-card");
+        const label=card.querySelector('label[for="'+input.id+'"]');
+        if(label)label.textContent="إجمالي تكلفة العرض ("+(currencyLabels[currency.value]||currency.value)+") *";
+      });
+      markDirty();
+    });
+    list.addEventListener("click",function(event){
+      const button=event.target.closest("[data-remove]");
+      if(!button)return;
+      const cards=list.querySelectorAll(".creator-card");
+      if(cards.length<=2)return;
+      button.closest(".creator-card").remove();
+      renumberCards();
+      markDirty();
+    });
+    list.addEventListener("input",markDirty);
+    list.addEventListener("change",markDirty);
+    $("addCreator").addEventListener("click",function(){addCreator();});
+    $("loadSample").addEventListener("click",sample);
+    $("resetTool").addEventListener("click",reset);
+    $("comparisonForm").addEventListener("submit",compare);
+    $("downloadCsv").addEventListener("click",exportCsv);
+    $("copyReport").addEventListener("click",copyReport);
+    addCreator();
+    addCreator();
+    renumberCards();
+  })();
+  </script>
+</body>
+</html>
