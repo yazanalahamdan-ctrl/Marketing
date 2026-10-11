@@ -567,3 +567,92 @@ min-width:900px;
 }
  
 
+
+
+/* Supporting blocks for the UTM and GA4 tracking guide */
+.article-date {
+  margin: 0 auto 22px;
+  color: #fde68a;
+  font-size: 14px;
+  font-weight: 800;
+}
+.info-box,
+.tip-box,
+.checklist-box {
+  margin: 28px 0;
+  padding: 24px 28px;
+  border: 1px solid rgba(245, 158, 11, 0.24);
+  border-radius: 22px;
+  background: #fff8ed;
+}
+.info-box h2,
+.tip-box h3 {
+  margin-top: 0;
+}
+.info-box h2::before {
+  display: none;
+}
+.tip-box {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+.checklist-box ul {
+  margin-bottom: 0;
+}
+.related-reading-section {
+  margin-top: 44px;
+  padding: 28px;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  background: #f8fafc;
+}
+.related-reading-section h2 {
+  margin-top: 0;
+}
+.related-reading-section h2::before {
+  display: none;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  padding: 36px 0;
+}
+.footer {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 16px 0;
+}
+.footer a {
+  color: #fde68a;
+  text-decoration: none;
+}
+.article-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 18px;
+  direction: ltr;
+  text-align: left;
+  border-radius: 14px;
+  background: #0f172a;
+  color: #f8fafc;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.article-content code {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-box,
+  .tip-box,
+  .checklist-box,
+  .related-reading-section {
+    padding: 20px 16px;
+  }
+  .page-hero h1 {
+    font-size: clamp(29px, 8vw, 42px);
+  }
+}
